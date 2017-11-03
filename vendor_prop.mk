@@ -123,9 +123,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Property to enable display default color mode
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.display.cabl=2
+    ro.vendor.display.cabl=2 \
+    vendor.display.enable_default_color_mode=1
 
-# IMS
+#IMS
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
