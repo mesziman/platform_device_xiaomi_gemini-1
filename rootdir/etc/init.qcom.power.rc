@@ -34,6 +34,10 @@ on init
     write /sys/devices/soc/${ro.boot.bootdevice}/clkgate_enable 0
     write /sys/devices/soc/${ro.boot.bootdevice}/${ro.boot.bootdevice}:ufs_variant/pm_qos_enable 0
 
+on post-fs-data
+    # Disable sched autogroup
+    write /proc/sys/kernel/sched_autogroup_enabled 0
+
 on boot
     # Update foreground and background cpusets
     write /dev/cpuset/foreground/cpus 0-3
