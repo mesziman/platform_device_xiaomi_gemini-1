@@ -86,7 +86,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.qfp=false \
     ro.hardware.fingerprint=fpc \
-    sys.fpc.tu.disabled=0
+    sys.fpc.tu.disabled=0 \
+    ro.fingerprint.cleanup.unused=false
 
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
