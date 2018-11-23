@@ -682,4 +682,7 @@
    <!-- Maximum color temperature, in Kelvin, supported by Night display. -->
    <integer name="config_nightDisplayColorTemperatureMax">4082</integer>
 
+    <!-- Whether the device has outdated qti-telephony-common.jar -->
+    <bool name="config_oldQtiTelephony">false</bool>
+
 </resources>
