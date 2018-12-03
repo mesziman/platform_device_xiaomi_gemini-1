@@ -216,8 +216,6 @@ TARGET_USES_MKE2FS := true
 
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
-#TARGET_USES_AOSP := true
-TARGET_HAS_NO_WLAN_STATS := true
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
