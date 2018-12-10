@@ -199,6 +199,10 @@ on property:sys.boot_completed=1
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
 
+#Animation script
+exec u:r:init:s0 root root -- /init.animation.sh
+exec u:r:su:s0 root root -- /init.animation.sh
+
 on property:init.svc.recovery=running
     trigger enable-low-power
 
