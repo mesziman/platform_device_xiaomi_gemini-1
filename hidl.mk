@@ -82,7 +82,7 @@ PRODUCT_PACKAGES += \
 
 # Power HIDL
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.1-service.gemini \
+    android.hardware.power@1.2-service.gemini-libperfmgr
 
 # RenderScript HIDL
 PRODUCT_PACKAGES += \
