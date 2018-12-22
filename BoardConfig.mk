@@ -162,6 +162,9 @@ TARGET_ENABLE_MEDIADRM_64 := true
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
+# EAP-SIM security
+DISABLE_EAP_PROXY := true
+
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
 TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/cryptfs_hw
