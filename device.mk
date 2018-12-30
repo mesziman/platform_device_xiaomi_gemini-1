@@ -157,8 +157,8 @@ PRODUCT_PACKAGES += \
     libcnefeatureconfig
 
 # ConfigPanel
-PRODUCT_PACKAGES += \
-    ConfigPanel \
+#PRODUCT_PACKAGES += \
+ #   ConfigPanel \
 
 # Default permissions
 PRODUCT_COPY_FILES += \
@@ -292,8 +292,8 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 # OTA Updates
-PRODUCT_PACKAGES += \
-    Updates
+#PRODUCT_PACKAGES += \
+ #   Updates
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
@@ -332,11 +332,11 @@ PRODUCT_COPY_FILES += \
 
 
 # Telephony
-PRODUCT_PACKAGES += \
-    telephony-ext
+#PRODUCT_PACKAGES += \
+ #   telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+#PRODUCT_BOOT_JARS += \
+ #   telephony-ext
 
 # Thermal
 PRODUCT_PACKAGES += \
@@ -366,6 +366,9 @@ PRODUCT_PACKAGES += \
     wificond \
     wifilogd \
     hostapd \
+    hostapd_cli \
+    libcld80211 \
+    libwpa_client \
     readfem \
     readmac \
     wpa_supplicant \
@@ -373,7 +376,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
+    $(LOCAL_PATH)/wifi/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
+    $(LOCAL_PATH)/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    $(LOCAL_PATH)/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini

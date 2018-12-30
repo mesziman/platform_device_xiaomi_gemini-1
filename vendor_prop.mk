@@ -56,7 +56,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     media.camera.ts.monotonic=0 \
     persist.camera.HAL3.enabled=1 \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi \
+    camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi \
     persist.camera.gyro.disable=0 \
     persist.camera.eis.enable=1 \
     persist.camera.imglib.fddsp=1
@@ -128,7 +129,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
     persist.dbg.ims_volte_enable=1  \
-    persist.dbg.wfc_avail_ovr=1
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.vendor.qti.pie.telephony=1
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
