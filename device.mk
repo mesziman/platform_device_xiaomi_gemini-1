@@ -367,7 +367,6 @@ PRODUCT_PACKAGES += \
     wifilogd \
     hostapd \
     hostapd_cli \
-    libcld80211 \
     libwpa_client \
     readfem \
     readmac \
