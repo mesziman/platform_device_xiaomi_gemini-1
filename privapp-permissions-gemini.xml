@@ -55,4 +55,18 @@
         <permission name="android.permission.CONTROL_LOCATION_UPDATES"/>
         <permission name="android.permission.MANAGE_USERS"/>
     </privapp-permissions>
+    
+    <privapp-permissions package="com.android.launcher3">
+        <permission name="android.permission.FORCE_STOP_PACKAGES" />
+    </privapp-permissions>
+
+    <privapp-permissions package="com.android.dialer">
+        <permission name="android.permission.CAPTURE_AUDIO_OUTPUT" />
+    </privapp-permissions>
+
+    <privapp-permissions package="com.android.systemui">
+        <permission name="android.permission.REBOOT" />
+        <permission name="android.permission.RECOVERY" />
+    </privapp-permissions>
+    
 </permissions>
