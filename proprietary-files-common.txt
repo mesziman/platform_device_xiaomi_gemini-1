@@ -758,3 +758,6 @@ lib64/libqti_performance.so|9c88af412e0276c578f06e1069b6c3aeae7e3f8d
 
 #Hexagon controller
 vendor/lib64/libhexagon_nn_controller.so
+
+# NFC firmware
+vendor/firmware/libpn548ad_fw.so:vendor/lib/libpn548ad_fw.so

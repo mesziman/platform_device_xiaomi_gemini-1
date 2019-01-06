@@ -279,22 +279,22 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
 # NFC
-#PRODUCT_PACKAGES += \
- #   com.android.nfc_extras \
+PRODUCT_PACKAGES += \
+    com.android.nfc_extras \
   #  com.nxp.nfc.nq \
    # com.nxp.nfc.nq.xml \
    # libnqnfc-nci \
    # libnqp61-jcop-kit \
    # nfc_nci.nqx.default \
-   # NQNfcNci \
+    NfcNci \
    # nqnfcee_access.xml \
    # nqnfcse_access.xml \
-   # SecureElement \
-   # Tag
+    SecureElement \
+    Tag
 
-#PRODUCT_COPY_FILES += \
- #   $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
-  #  $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
+    $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
    # $(LOCAL_PATH)/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-brcm.conf
 
 # OMX
