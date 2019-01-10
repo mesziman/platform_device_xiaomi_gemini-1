@@ -178,6 +178,9 @@ on post-fs-data
     mkdir /data/vendor/wifi 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
+    mkdir /data/vendor/wifi/hostapd 0770 wifi wifi
+    mkdir /data/vendor/wifi/hostapd/ctrl 0770 wifi wifi
+    mkdir /data/vendor/wifi/wigig_hostapd 0770 wifi wifi
 
     # Create netmgr log dir
     mkdir /data/vendor/netmgr 0770 radio radio
@@ -219,6 +222,9 @@ on post-fs-data
     # allow the sensors daemon to perform this as non-root
     chown root system /dev/sensors
     chmod 0660 /dev/sensors
+
+    #Create directory for hostapd
+    mkdir /data/hostapd 0770 system wifi
 
     # Create /data/vendor/time folder for time-services
     mkdir /data/vendor/time 0700 system system
