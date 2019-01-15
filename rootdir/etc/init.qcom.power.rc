@@ -80,7 +80,38 @@ on charger
     start vendor.hvdcp_opti
     start thermal-engine
 
-on enable-low-power
+    #Config Simple Thermal driver
+    # [throttle_freq_LITTLE, throttle_freq_BIG, throttle_temp, unthrottle_temp]
+    write /sys/kernel/msm_thermal/enabled 0
+    write /sys/kernel/msm_thermal/zone0  "1996800 2150400 37 36"
+    write /sys/kernel/msm_thermal/zone1  "1728000 2073600 38 37"
+    write /sys/kernel/msm_thermal/zone2  "1593600 1996800 39 38"
+    write /sys/kernel/msm_thermal/zone3  "1593600 1920000 40 39"
+    write /sys/kernel/msm_thermal/zone4  "1478400 1824000 41 40"
+    write /sys/kernel/msm_thermal/zone5  "1478400 1785600 42 41"
+    write /sys/kernel/msm_thermal/zone5  "1478400 1708800 43 42"
+    write /sys/kernel/msm_thermal/zone6  "1401600 1632000 44 43"
+    write /sys/kernel/msm_thermal/zone6  "1401600 1555200 45 44"
+    write /sys/kernel/msm_thermal/zone7  "1401600 1478400 46 45"
+    write /sys/kernel/msm_thermal/zone8  "1401600 1401600 47 46"
+    write /sys/kernel/msm_thermal/zone9  "1324800 1324800 48 47"
+    write /sys/kernel/msm_thermal/zone10 "1324800 1248000 49 48"
+    write /sys/kernel/msm_thermal/zone11 "1228800 1190400 50 49"
+    write /sys/kernel/msm_thermal/zone12 "1190400 1113600 51 50"
+    write /sys/kernel/msm_thermal/zone13 "1113600 1036800 52 51"
+    write /sys/kernel/msm_thermal/zone14 "1036800 940800 53 52"
+    write /sys/kernel/msm_thermal/zone15 "960000 883200 54 53"
+    write /sys/kernel/msm_thermal/zone16 "844800 806400 55 54"
+    write /sys/kernel/msm_thermal/zone17 "729600 729600 56 55"
+    write /sys/kernel/msm_thermal/zone18 "652800 652800 57 56"
+    write /sys/kernel/msm_thermal/zone19 "556800 556800 58 57"
+    write /sys/kernel/msm_thermal/zone20 "480000 480000 59 58"
+    write /sys/kernel/msm_thermal/zone21 "422400 403200 60 59"
+    write /sys/kernel/msm_thermal/zone22 "307200 307200 65 60"
+    write /sys/kernel/msm_thermal/sampling_ms 1000
+    write /sys/kernel/msm_thermal/enabled 1
+
+    on enable-low-power
 
     # Disable sched_boost after boot complete
     write /proc/sys/kernel/sched_boost 0
@@ -108,20 +139,6 @@ on enable-low-power
     #write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 480000
     #write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 0
     #write /sys/module/cpu_input_boost/parameters/input_boost_duration 20
-
-    # Set thermal restrictions
-    write /sys/kernel/msm_thermal/enabled 0
-    write /sys/kernel/msm_thermal/zone0 "1401600 1785600 40 38"
-    write /sys/kernel/msm_thermal/zone1 "1324800 1555200 41 40"
-    write /sys/kernel/msm_thermal/zone2 "1228800 1478400 42 41"
-    write /sys/kernel/msm_thermal/zone3 "1228800 1401600 43 42"
-    write /sys/kernel/msm_thermal/zone4 "1190400 1324800 44 43"
-    write /sys/kernel/msm_thermal/zone5 "1190400 1248000 46 44"
-    write /sys/kernel/msm_thermal/zone6 "1113600 1190400 48 46"
-    write /sys/kernel/msm_thermal/zone7 "1036800 940800 53 50"
-    write /sys/kernel/msm_thermal/zone8 "729600 729600 65 60"
-    write /sys/kernel/msm_thermal/sampling_ms 5000
-    write /sys/kernel/msm_thermal/enabled 1
 
     # Enable bus-dcvs
     write /sys/class/devfreq/soc:qcom,cpubw/governor "bw_hwmon"
@@ -190,7 +207,7 @@ on enable-low-power
     # Set perfd properties
     setprop vendor.post_boot.parsed 1
 
-on property:sys.boot_completed=1
+    on property:sys.boot_completed=1
     trigger enable-low-power
 
     # Set I/O squeduler
@@ -198,6 +215,37 @@ on property:sys.boot_completed=1
 
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
+
+    #Config Simple Thermal driver
+    # [throttle_freq_LITTLE, throttle_freq_BIG, throttle_temp, unthrottle_temp]
+    write /sys/kernel/msm_thermal/enabled 0
+    write /sys/kernel/msm_thermal/zone0  "1996800 2150400 37 36"
+    write /sys/kernel/msm_thermal/zone1  "1728000 2073600 38 37"
+    write /sys/kernel/msm_thermal/zone2  "1593600 1996800 39 38"
+    write /sys/kernel/msm_thermal/zone3  "1593600 1920000 40 39"
+    write /sys/kernel/msm_thermal/zone4  "1478400 1824000 41 40"
+    write /sys/kernel/msm_thermal/zone5  "1478400 1785600 42 41"
+    write /sys/kernel/msm_thermal/zone5  "1478400 1708800 43 42"
+    write /sys/kernel/msm_thermal/zone6  "1401600 1632000 44 43"
+    write /sys/kernel/msm_thermal/zone6  "1401600 1555200 45 44"
+    write /sys/kernel/msm_thermal/zone7  "1401600 1478400 46 45"
+    write /sys/kernel/msm_thermal/zone8  "1401600 1401600 47 46"
+    write /sys/kernel/msm_thermal/zone9  "1324800 1324800 48 47"
+    write /sys/kernel/msm_thermal/zone10 "1324800 1248000 49 48"
+    write /sys/kernel/msm_thermal/zone11 "1228800 1190400 50 49"
+    write /sys/kernel/msm_thermal/zone12 "1190400 1113600 51 50"
+    write /sys/kernel/msm_thermal/zone13 "1113600 1036800 52 51"
+    write /sys/kernel/msm_thermal/zone14 "1036800 940800 53 52"
+    write /sys/kernel/msm_thermal/zone15 "960000 883200 54 53"
+    write /sys/kernel/msm_thermal/zone16 "844800 806400 55 54"
+    write /sys/kernel/msm_thermal/zone17 "729600 729600 56 55"
+    write /sys/kernel/msm_thermal/zone18 "652800 652800 57 56"
+    write /sys/kernel/msm_thermal/zone19 "556800 556800 58 57"
+    write /sys/kernel/msm_thermal/zone20 "480000 480000 59 58"
+    write /sys/kernel/msm_thermal/zone21 "422400 403200 60 59"
+    write /sys/kernel/msm_thermal/zone22 "307200 307200 65 60"
+    write /sys/kernel/msm_thermal/sampling_ms 1000
+    write /sys/kernel/msm_thermal/enabled 1
 
 #Animation script
 exec u:r:init:s0 root root -- /init.animation.sh
