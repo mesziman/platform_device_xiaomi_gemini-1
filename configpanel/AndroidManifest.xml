@@ -21,7 +21,11 @@
     android:versionName="2.5"
     android:sharedUserId="android.uid.system">
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.INJECT_EVENTS"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
     <protected-broadcast android:name="com.cyanogenmod.settings.device.CUST_UPDATE" />
 
     <uses-sdk
@@ -54,16 +58,26 @@
             </intent-filter>
             <meta-data
                 android:name="com.android.settings.icon"
-                android:resource="@drawable/ic_settings_additional_buttons" />
+                android:resource="@drawable/ic_settings_device_features" />
             <meta-data
                 android:name="com.android.settings.category"
                 android:value="com.android.settings.category.device" />
         </activity>
 
+                <activity
+                        android:name="com.cyanogenmod.settings.device.DisplayCalibration"
+                        android:exported="true"
+                        android:label="@string/kcal_title" >
+                        <intent-filter>
+                                <action android:name="android.intent.action.MAIN" />
+                                <category android:name="android.intent.category.DEFAULT" />
+                        </intent-filter>
+		</activity>
+
         <activity android:name=".KeyHandler" />
 
         <receiver android:name=".Startup" >
-            <intent-filter>
+            <intent-filter android:priority="100">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.PRE_BOOT_COMPLETED" />
             </intent-filter>

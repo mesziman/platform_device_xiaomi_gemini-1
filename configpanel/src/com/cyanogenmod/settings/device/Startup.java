@@ -35,11 +35,17 @@ public class Startup extends BroadcastReceiver {
     private static final String TAG = Startup.class.getSimpleName();
 
     @Override
-    public void onReceive(Context context, Intent intent) {
+    public void onReceive(final Context context, final Intent intent) {
         final String action = intent.getAction();
+
+        DisplayCalibration.restore(context);
+
         if (Intent.ACTION_BOOT_COMPLETED.equals(action)
                 || Intent.ACTION_PRE_BOOT_COMPLETED.equals(action)) {
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+
+            VibratorStrengthPreference.restore(context);
+            DisplayCalibration.restore(context);
 
             // Disable button settings if needed
             if (!hasButtonProcs()) {
@@ -64,18 +70,20 @@ public class Startup extends BroadcastReceiver {
                 }
 
                 // Send initial broadcasts
-                final boolean shouldEnablePocketMode =
+//                final boolean shouldEnablePocketMode =
+//                        prefs.getBoolean(Constants.FP_WAKEUP_KEY, false) &&
+//                        prefs.getBoolean(Constants.FP_POCKETMODE_KEY, false);
+//                Utils.broadcastCustIntent(context, shouldEnablePocketMode);
                         prefs.getBoolean(Constants.FP_WAKEUP_KEY, false);
-                Utils.broadcastCustIntent(context, shouldEnablePocketMode);
             }
         }
     }
 
     static boolean hasButtonProcs() {
-        return new File(Constants.CYTTSP_BUTTON_SWAP_NODE).exists() ||
-                new File(Constants.FP_HOME_KEY_NODE).exists() ||
-                new File(Constants.FP_WAKEUP_NODE).exists() ||
-                new File(Constants.TOUCHPANEL_BUTTON_SWAP_NODE).exists();
+        return new File(Constants.FP_HOME_KEY_NODE).exists() ||
+                new File(Constants.FP_WAKEUP_NODE).exists();
+//                Constants.CYTTSP_BUTTON_SWAP_NODE).exists() ||
+//                new File(Constants.TOUCHPANEL_BUTTON_SWAP_NODE).exists();
     }
 
     private void disableComponent(Context context, String component) {
