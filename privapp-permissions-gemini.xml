@@ -78,5 +78,9 @@
         <permission name="android.permission.WRITE_MEDIA_STORAGE" />
         <permission name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     </privapp-permissions>
+
+    <privapp-permissions package="com.android.vending">
+        <permission name="android.permission.READ_RUNTIME_PROFILES" />
+    </privapp-permissions>
     
 </permissions>
