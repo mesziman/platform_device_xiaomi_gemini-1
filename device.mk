@@ -158,7 +158,6 @@ PRODUCT_PACKAGES += \
 # Device init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.animation.sh \
     init.qcom.rc \
     init.qcom.power.rc \
     init.qcom.usb.rc \

@@ -245,11 +245,7 @@ on charger
     write /sys/kernel/msm_thermal/zone21 "422400 403200 60 59"
     write /sys/kernel/msm_thermal/zone22 "307200 307200 65 60"
     write /sys/kernel/msm_thermal/sampling_ms 1000
-    write /sys/kernel/msm_thermal/enabled 1
-
-#Animation script
-exec u:r:init:s0 root root -- /vendor/bin/init.animation.sh
-exec u:r:su:s0 root root -- /vendor/bin/init.animation.sh
+    write /sys/kernel/msm_thermal/enabled
 
 on property:init.svc.recovery=running
     trigger enable-low-power
