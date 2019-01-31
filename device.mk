@@ -27,8 +27,8 @@ $(call inherit-product-if-exists, vendor/xiaomi/msm8996-common/msm8996-common-ve
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
+#PRODUCT_ENFORCE_RRO_TARGETS := \
+    #framework-res
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
