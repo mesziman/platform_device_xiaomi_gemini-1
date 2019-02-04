@@ -56,10 +56,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     media.camera.ts.monotonic=0 \
     persist.camera.HAL3.enabled=1 \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera \
     persist.camera.gyro.disable=0 \
     persist.camera.eis.enable=1 \
-    persist.camera.imglib.fddsp=1
+    persist.camera.imglib.fddsp=1 \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi \
+    camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -91,7 +92,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.qfp=false \
     ro.hardware.fingerprint=fpc \
-    sys.fpc.tu.disabled=0
+    sys.fpc.tu.disabled=0 \
 
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -148,7 +149,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Priv-app permissions whitelist
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.control_privapp_permissions=enforce
+    ro.control_privapp_permissions=log
     
 # Qualcomm BT aptXHD
 PRODUCT_PROPERTY_OVERRIDES += \
