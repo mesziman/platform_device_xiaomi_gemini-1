@@ -59,8 +59,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.gyro.disable=0 \
     persist.camera.eis.enable=1 \
     persist.camera.imglib.fddsp=1 \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi \
-    camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.android.GoogleCameraTele \
+    camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.android.GoogleCameraTele \
+    persist.camera.privapp.list=com.android.camera,com.google.android.GoogleCameraTele,org.codeaurora.snapcam \
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
