@@ -610,12 +610,12 @@
     <bool translatable="false" name="config_wifi_revert_country_code_on_cellular_loss">true</bool>
 
     <!-- Default value for proximity check on screen wake
-         NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms) >
+         NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms) -->
     <bool name="config_proximityCheckOnWake">true</bool>
-    <integer name="config_proximityCheckTimeout">250</integer>
+    <!--integer name="config_proximityCheckTimeout">100</integer -->
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
 
-    <- Stop listening to the fingerprint reader when NON-WAKEUP proximity sensor is covered & screen is off.
+    <!-- Stop listening to the fingerprint reader when NON-WAKEUP proximity sensor is covered & screen is off.
          config_proximityCheckOnWake must be true.>
     <bool name="config_proximityCheckOnFingerprintWake">true</bool> -->
 
@@ -637,11 +637,12 @@
          or a single SIM device can have 1 phones/logical modems, but 2 physical slots (one eSIM
          and one pSIM) -->
     <integer name="config_num_physical_slots">2</integer>
-    
-    <!-- Whether to cleanup fingerprints upon connection to the daemon and when user switches -->
-    <bool name="config_cleanupUnusedFingerprints">false</bool>
 
     <!-- Whether the device has fingeprint sensor or not -->
     <bool name="config_hasFingerprintSensor">true</bool>
+
+    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
+         in hardware. -->
+    <bool name="config_setColorTransformAccelerated">true</bool>
 
 </resources>
