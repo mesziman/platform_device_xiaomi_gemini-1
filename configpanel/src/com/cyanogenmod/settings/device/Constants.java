@@ -25,7 +25,7 @@ import com.cyanogenmod.settings.device.utils.FileUtils;
 public class Constants {
 
     // Preference keys
-//    public static final String BUTTON_SWAP_KEY = "button_swap";
+    public static final String BUTTON_SWAP_KEY = "button_swap";
     public static final String FP_HOME_KEY = "fp_home";
 //    public static final String FP_POCKETMODE_KEY = "fp_pocketmode";
     public static final String FP_WAKEUP_KEY = "fp_wakeup";
@@ -34,10 +34,10 @@ public class Constants {
 
 
     // Nodes
-//    public static final String CYTTSP_BUTTON_SWAP_NODE = "/proc/buttons/reversed_keys_enable";
+    public static final String CYTTSP_BUTTON_SWAP_NODE = "/proc/buttons/reversed_keys_enable";
     public static final String FP_HOME_KEY_NODE = "/sys/devices/soc/soc:fpc_fpc1020/enable_key_events";
     public static final String FP_WAKEUP_NODE = "/sys/devices/soc/soc:fpc_fpc1020/enable_wakeup";
-//    public static final String TOUCHPANEL_BUTTON_SWAP_NODE = "/proc/touchpanel/reversed_keys_enable";
+    public static final String TOUCHPANEL_BUTTON_SWAP_NODE = "/proc/touchpanel/reversed_keys_enable";
     public static final String VIRTUAL_KEYS_NODE = "/proc/touchpanel/capacitive_keys_enable";
     public static final String DT2W_NODE = "/proc/touchpanel/double_tap_enable";
     public static final String CHARGE_LIMIT_NODE = "/sys/module/qpnp_smbcharger/parameters/default_hvdcp3_icl_ma";
@@ -60,7 +60,7 @@ public class Constants {
     public static final Map<String, String[]> sNodeDependencyMap = new HashMap<>();
 
     public static final String[] sButtonPrefKeys = {
-//        BUTTON_SWAP_KEY,
+        BUTTON_SWAP_KEY,
         FP_HOME_KEY,
         FP_WAKEUP_KEY,
 	DT2W_KEY,
@@ -68,17 +68,17 @@ public class Constants {
     };
 
     static {
-//        if (FileUtils.fileExists(Constants.CYTTSP_BUTTON_SWAP_NODE)) {
-//            sBooleanNodePreferenceMap.put(BUTTON_SWAP_KEY, CYTTSP_BUTTON_SWAP_NODE);
-//        } else if (FileUtils.fileExists(Constants.TOUCHPANEL_BUTTON_SWAP_NODE)) {
-//            sBooleanNodePreferenceMap.put(BUTTON_SWAP_KEY, TOUCHPANEL_BUTTON_SWAP_NODE);
-//        }
+        if (FileUtils.fileExists(Constants.CYTTSP_BUTTON_SWAP_NODE)) {
+            sBooleanNodePreferenceMap.put(BUTTON_SWAP_KEY, CYTTSP_BUTTON_SWAP_NODE);
+        } else if (FileUtils.fileExists(Constants.TOUCHPANEL_BUTTON_SWAP_NODE)) {
+            sBooleanNodePreferenceMap.put(BUTTON_SWAP_KEY, TOUCHPANEL_BUTTON_SWAP_NODE);
+        }
         sBooleanNodePreferenceMap.put(FP_HOME_KEY, FP_HOME_KEY_NODE);
         sBooleanNodePreferenceMap.put(FP_WAKEUP_KEY, FP_WAKEUP_NODE);
         sBooleanNodePreferenceMap.put(DT2W_KEY, DT2W_NODE);
 	sStringNodePreferenceMap.put(CHARGE_LIMIT_KEY, CHARGE_LIMIT_NODE);
 
-//        sNodeDefaultMap.put(BUTTON_SWAP_KEY, false);
+        sNodeDefaultMap.put(BUTTON_SWAP_KEY, false);
         sNodeDefaultMap.put(DT2W_KEY, false);
         sNodeDefaultMap.put(FP_HOME_KEY, true);
         sNodeDefaultMap.put(FP_WAKEUP_KEY, true);
