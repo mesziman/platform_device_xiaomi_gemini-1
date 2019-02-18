@@ -12,4 +12,5 @@ allow hal_perf_default  {
     sysfs_power_management
 }:file r_file_perms;
 allow hal_perf_default proc_kernel_sched:file rw_file_perms;
-allow hal_perf_default self:capability { dac_override dac_read_search };
+
+dontaudit hal_perf_default self:capability { dac_override dac_read_search };
