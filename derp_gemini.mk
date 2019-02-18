@@ -22,11 +22,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from gemini device
 $(call inherit-product, device/xiaomi/gemini/device.mk)
 
-# Inherit from common Citrus
-$(call inherit-product, vendor/citrus/common.mk)
+# Inherit derps
+$(call inherit-product, vendor/derp/config/derp.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := citrus_gemini
+PRODUCT_NAME := derp_gemini
 PRODUCT_DEVICE := gemini
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 5

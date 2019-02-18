@@ -54,7 +54,8 @@ PRODUCT_GENERIC_PROPERTIES += \
 
 
 # HWUI and Dalvik VM overrides
-$(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-dalvik-heap.mk)
+$(call inherit-product, vendor/derp/build/configs/phone-xxxhdpi-3072-hwui-memory.mk)
+$(call inherit-product, vendor/derp/build/configs/phone-xxxhdpi-3072-dalvik-heap.mk)
 
 # Permissions
 PRODUCT_COPY_FILES += \
