@@ -12,4 +12,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/citrus_gemini.mk
+    $(LOCAL_DIR)/derp_gemini.mk
