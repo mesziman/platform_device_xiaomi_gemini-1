@@ -25,6 +25,10 @@ $(call inherit-product, device/xiaomi/gemini/device.mk)
 # Inherit from freddy
 $(call inherit-product, vendor/fred/config/common.mk)
 
+# Maintainer Prop.
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.fred.maintainer=RadixCube
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := fred_gemini
 PRODUCT_DEVICE := gemini

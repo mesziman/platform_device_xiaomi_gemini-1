@@ -186,6 +186,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.calls.on.ims=1 \
     telephony.lteOnCdmaDevice=1 \
     persist.vendor.radio.sib16_support=1
+    persist.vendor.qti.pie.telephony=1
 
 # RmNet Data
 PRODUCT_PROPERTY_OVERRIDES += \
