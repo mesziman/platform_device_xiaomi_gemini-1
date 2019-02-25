@@ -10,3 +10,9 @@ sys.listeners.registered   u:object_r:vendor_tee_listener_prop:s0
 sys.panel.                 u:object_r:system_panel_prop:s0
 boot.wificountrycode       u:object_r:wifi_region_prop:s0
 sys.post_boot.parsed       u:object_r:vendor_mpctl_prop:s0
+
+#Power HAL
+vendor.powerhal.state      u:object_r:power_prop:s0
+vendor.powerhal.audio      u:object_r:power_prop:s0
+vendor.powerhal.init       u:object_r:power_prop:s0
+vendor.powerhal.rendering  u:object_r:power_prop:s0
