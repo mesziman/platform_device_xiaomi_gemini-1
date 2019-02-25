@@ -22,15 +22,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from gemini device
 $(call inherit-product, device/xiaomi/gemini/device.mk)
 
-# Inherit from freddy
-$(call inherit-product, vendor/fred/config/common.mk)
+$(call inherit-product, vendor/xperience/config/common_full_phone.mk)
 
-# Maintainer Prop.
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.fred.maintainer=RadixCube
+#CAF prop CAF includes
+include device/qcom/common/common.mk
+
+# Wpa will crash without this.
+DISABLE_EAP_PROXY := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := fred_gemini
+PRODUCT_NAME := xperience_gemini
 PRODUCT_DEVICE := gemini
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 5

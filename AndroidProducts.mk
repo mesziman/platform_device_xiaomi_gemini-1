@@ -12,4 +12,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/fred_gemini.mk
+    $(LOCAL_DIR)/xperience_gemini.mk
