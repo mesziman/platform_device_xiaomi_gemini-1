@@ -29,7 +29,7 @@ if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
 JDC_ROOT="$MY_DIR"/../../..
 
-HELPER="$JDC_ROOT"/vendor/aosp/build/tools/extract_utils.sh
+HELPER="$JDC_ROOT"/vendor/xperience/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1

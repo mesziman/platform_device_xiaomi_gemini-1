@@ -148,7 +148,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     camera.msm8996 \
     libmm-qcamera \
-    SnapdragonCamera
+    Camera2
 #    Snap
 
 # Device config scripts

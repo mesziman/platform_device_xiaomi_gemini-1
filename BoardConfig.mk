@@ -45,7 +45,7 @@ TARGET_NO_BOOTLOADER := true
 
 #SDClang
 #TARGET_USE_SDCLANG := true
-SDCLANG := true
+#SDCLANG := true
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(VENDOR_PATH)/vendor_framework_compatibility_matrix.xml
