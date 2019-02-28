@@ -27,8 +27,8 @@ $(call inherit-product-if-exists, vendor/xiaomi/msm8996-common/msm8996-common-ve
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
+#PRODUCT_ENFORCE_RRO_TARGETS := \
+ #   framework-res
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
@@ -145,10 +145,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
 # Camera
-PRODUCT_PACKAGES += \
-    camera.msm8996 \
-    libmm-qcamera \
-    Camera2
+#PRODUCT_PACKAGES += \
+ #   camera.msm8996 \
+  #  libmm-qcamera \
+   # SnapdragonCamera
 #    Snap
 
 # Device config scripts

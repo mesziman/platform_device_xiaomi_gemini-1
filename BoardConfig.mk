@@ -80,7 +80,7 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno530
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
 # ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-uart"
+#BOARD_ANT_WIRELESS_DEVICE := "qualcomm-uart"
 
 # Audio
 AUDIO_FEATURE_ENABLED_ACDB_LICENSE := true
@@ -242,6 +242,12 @@ NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 # Vendor init
 TARGET_INIT_VENDOR_LIB := libinit_gemini
 TARGET_RECOVERY_DEVICE_MODULES := libinit_gemini
+
+# VNDK
+DEVICE_DEFINES_OWN_VNDK := true
+
+# Wpa will crash without this.
+DISABLE_EAP_PROXY := true
 
 # WebView Beta
 PREBUILT_WEBVIEW_VERSION := chromium

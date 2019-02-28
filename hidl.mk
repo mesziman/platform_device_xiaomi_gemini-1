@@ -22,9 +22,9 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.1-impl
 
 # Camera
-PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service
+#PRODUCT_PACKAGES += \
+ #   android.hardware.camera.provider@2.4-impl \
+  #  android.hardware.camera.provider@2.4-service
 
 # Display HIDL
 PRODUCT_PACKAGES += \
