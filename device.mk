@@ -185,6 +185,7 @@ PRODUCT_PACKAGES += \
 # ConfigPanel
 PRODUCT_PACKAGES += \
     ConfigPanel \
+    XiaomiPocketMode \
 
 # Default permissions
 PRODUCT_COPY_FILES += \
