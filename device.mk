@@ -152,10 +152,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
 # Camera
-PRODUCT_PACKAGES += \
-    camera.msm8996 \
-    libmm-qcamera \
-    SnapdragonCamera
+#PRODUCT_PACKAGES += \
+ #   camera.msm8996 \
+  #  libmm-qcamera \
+   # SnapdragonCamera
 #    Snap
 
 # Device config scripts
@@ -183,8 +183,8 @@ PRODUCT_PACKAGES += \
     libcnefeatureconfig
 
 # ConfigPanel
-PRODUCT_PACKAGES += \
-    ConfigPanel \
+#PRODUCT_PACKAGES += \
+ #   ConfigPanel \
 
 # Default permissions
 PRODUCT_COPY_FILES += \
