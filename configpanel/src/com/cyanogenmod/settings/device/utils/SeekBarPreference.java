@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package com.syberia.settings.device.preference;
+package com.cyanogenmod.settings.device.utils;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -35,8 +35,8 @@ import android.widget.TextView;
 import android.os.Handler;
 import android.os.Message;
 
-import com.syberia.settings.device.R;
-import com.syberia.settings.device.utils.Utils;
+import com.cyanogenmod.settings.device.R;
+import com.cyanogenmod.settings.device.Utils;
 
 public class SeekBarPreference extends Preference {
 
@@ -140,12 +140,6 @@ public class SeekBarPreference extends Preference {
 
     public int reset() {
         currentValue = (int) Utils.clamp(def, minimum, maximum);
-        notifyChanged();
-        return currentValue;
-    }
-
-    public int reset(int value) {
-        currentValue = (int) Utils.clamp(value, minimum, maximum);
         notifyChanged();
         return currentValue;
     }
