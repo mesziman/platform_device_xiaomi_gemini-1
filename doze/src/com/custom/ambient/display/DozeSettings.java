@@ -44,11 +44,12 @@ public class DozeSettings extends PreferenceActivity implements OnPreferenceChan
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.doze_settings);
         mContext = getApplicationContext();
+        boolean dozeEnabled = Utils.isDozeEnabled(mContext);
 
         mAmbientDisplayPreference =
             (SwitchPreference) findPreference(Utils.AMBIENT_DISPLAY_KEY);
         // Read from DOZE_ENABLED secure setting
-        mAmbientDisplayPreference.setChecked(Utils.isDozeEnabled(mContext));
+        mAmbientDisplayPreference.setChecked(dozeEnabled);
         mAmbientDisplayPreference.setOnPreferenceChangeListener(this);
 
         mPickUpPreference =
@@ -91,15 +92,15 @@ public class DozeSettings extends PreferenceActivity implements OnPreferenceChan
             return true;
         } else if (Utils.PICK_UP_KEY.equals(key)) {
             mPickUpPreference.setChecked(value);
-            Utils.enablePickUp(value, mContext);
+            Utils.startService(mContext);
             return true;
         } else if (Utils.GESTURE_HAND_WAVE_KEY.equals(key)) {
             mHandwavePreference.setChecked(value);
-            Utils.enableHandWave(value, mContext);
+            Utils.startService(mContext);
             return true;
         } else if (Utils.GESTURE_POCKET_KEY.equals(key)) {
             mPocketPreference.setChecked(value);
-            Utils.enablePocketMode(value, mContext);
+            Utils.startService(mContext);
             return true;
         }
         return false;
